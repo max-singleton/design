@@ -1,0 +1,36 @@
+.ask-form, .ask-form__table, .ask-form__cell input, .ask-form__cell textarea{
+    width: 100%;
+}
+.ask-form__cell:nth-of-type(2){
+    padding-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+    .ask-form__table{
+        display: table;
+    }
+    .ask-form__row{
+        display: table-row;
+        margin-bottom: 7px;
+    }
+    .ask-form__cell{
+        display: table-cell;
+        vertical-align: top;
+    }
+    .ask-form__cell:nth-of-type(1){
+        padding-right: 20px;
+        width: 30%;
+        min-width: 280px;
+    }
+    .ask-form__cell:nth-of-type(2){
+        width: 70%;
+    }
+}
+
+.ask-form__row .input-checkbox {
+    float: left;
+}
+
+.feedback-checkbox input[type=checkbox]+label {
+    padding-left: 0px !important;
+    line-height: 18px !important;
+}

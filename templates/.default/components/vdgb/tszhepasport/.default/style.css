@@ -1,0 +1,192 @@
+.data-table td.cost {
+	white-space: nowrap;
+}
+.data-table .rwd-optional {
+    display: none;
+}
+.sheet-type-select {
+    margin-bottom: 10px;
+}
+.sheet-type-select:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.sheet-type {
+    float: left;
+    margin: 0px;
+    border-width: 1px;
+    border-style: solid;
+}
+.sheet-type.left-bordered {
+    border-radius: 3px 0px 0px 3px;
+}
+.sheet-type.right-bordered {
+    border-radius: 0px 3px 3px 0px;
+}
+.sheet-type a {
+    display: block;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+.sheet-type.main-bg a {
+    color: #fff;
+}
+
+#left-area{
+
+}
+/*фиксированное плавающее меню*/
+#menu-area{
+   z-index: 5;
+}
+#border_left{
+	float:right;
+	width:20px;
+	/*height:700px;*/
+	position: absolute;
+	margin-left: 150px;
+	background: url("/bitrix/components/vdgb/tszhepasport.detail/images/menu-icons/0.png");
+}
+#image-focused{
+	position: absolute;
+	/*float:right;*/
+	/*clear:right;*/
+	display:block;
+	left:180px;
+}
+
+.menu-item {
+	width:150px;
+	border:1px;
+	border-color:black;
+	font-size:15px;
+	margin: 0 0 0 0;
+	position: absolute;
+	line-height: 1.2;
+}
+.menu-item:hover {
+    color: #a9a9a9;
+	cursor: pointer;
+}
+.home-adress {
+	height: 30px;
+	background: #FFFFFF;
+	padding: 20px 0px 40px 12px;
+	font-size: 18px;
+	border-bottom: 2px solid;
+	color: #000000;
+}
+.border_image{
+	display: block;
+	float:left;
+	clear:left;
+}
+
+
+.h3_home h3 {	
+	font-weight:normal;	
+	font-size:18px;
+	color:#000;
+	font-family:'Verdana';
+	padding: 0 0 15px 0;
+	margin-bottom: 5px;
+    border-bottom: 1px solid #000;
+}
+
+.subsection .house-image{
+	width: 400px;
+	margin-right: 40px;
+	margin-top: 20px;
+	float:left;
+}
+table {
+	border-collapse: collapse;
+}
+
+table.col2, table.bordered.coln {
+	border:1px solid #d1e0ee;
+	padding:0px;
+	width:100%;
+	font-size:14px;
+	color:#000;
+}
+table.col2 th, table.coln th {
+	background: #edebec;
+	font-size: 16px;
+	padding: 15px;
+	border:1px solid #d1e0ee;
+}
+
+table.col2 tr, table.bordered.coln tr  {
+	height:25px;
+	border:1px solid #d1e0ee;
+}
+
+table.col2 td, table.bordered.coln td  {
+	padding:0 5px;
+	border:1px solid #d1e0ee;
+}
+.item-name{
+	display: block;
+	float: left;
+	clear: left;
+	width: 250px;
+	text-align: left;
+	font: 14px Arial !important;
+	color: #000000;
+	padding:4px;
+}
+.item{
+	display: block;
+	float: left;
+	width: 80px;
+	border-right: 1px solid;
+	border-top: 1px solid;
+	text-align: right;
+	font: 14px Arial !important;
+	color: #5a5a5a;
+	padding:4px;
+}
+@font-face {
+	font-family: Roboto-Regular; /* Гарнитура шрифта */
+	src: url(fonts/Roboto-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+#work {
+	font-family: Roboto-Regular;
+}
+#work h2 {
+	padding: 30px 0 20px 10px  !important;
+	margin-top: 0px;
+	font-family: Roboto-Regular !important;
+	font-size: 18px !important;
+	color: #134475 !important;
+}
+.subsection h4 {
+	margin-bottom: 0;
+	padding-left:30px;
+	background:#5185b9;
+	font-weight:normal;
+	width:100%;
+	height:50px;
+	line-height:50px;
+	color:#FFFFFF;
+	font-size:16px;
+	font-family: Roboto-Regular;
+}
+
+@media (min-width: 970px)
+{
+    .data-table .rwd-optional {
+        display: table-cell;
+    }
+}
+
+@media screen  and (min-width: 1200px) {
+	.item-name{
+		border-right: 1px solid;
+		border-left: 1px solid;
+		border-top: 1px solid;
+	}
+}
+

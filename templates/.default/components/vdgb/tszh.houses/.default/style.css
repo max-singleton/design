@@ -1,0 +1,54 @@
+.houses {
+    font-size: 15px;
+    margin: 30px 0;
+}
+
+.houses__table td, th {
+    padding: 10px;
+    border-bottom: 1px solid #2b5f93;
+}
+
+.houses__table > thead td {
+    font-weight: bolder;
+}
+
+.house-mobi-tszh-name {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #2b5f93;
+    border-top: 1px solid #2b5f93;
+    display: block !important;
+    background-color: #709dca;
+    font-weight: bold;
+}
+
+.house-mobi-tszh-name:first-child{
+    border-top: none;
+    border-radius: 4px 4px 0 0;
+}
+
+.house-mobi__item {
+    display: table-row;
+    padding: 10px;
+    text-align: center;
+}
+
+.house-mobi__item>div:first-child{
+    width: 40%;
+}
+
+.table1 .table1__cell {
+    padding: 10px 5px;
+    text-align: left !important;
+    border-bottom: none !important;
+}
+
+.table1 .table1__cell:nth-child(n+2) {
+    border-left: none !important;
+    word-break: break-all;
+}
+
+.house-mobi hr {
+    margin: 15px 5px;
+}
+

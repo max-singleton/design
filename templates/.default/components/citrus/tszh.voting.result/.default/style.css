@@ -1,0 +1,102 @@
+.vote-result {
+	/*background-color: #ededed;
+	padding: 20px 30px;
+	border-radius: 10px;*/
+}
+.vote-result__header, .vote-result__title {
+	font-size: 1.17em;
+	padding-bottom: 10px;
+}
+
+.vote-result__header{
+	font-weight: bold;
+}
+
+.vote-result__period {
+	color: orange;
+	/*float: right;*/
+	font-style: italic;
+	padding-bottom: 10px;
+}
+.vote-result__item {
+	/*color: #fff;*/
+	padding: 20px;
+	margin-top: 15px;
+	border: 1px solid #ececec;
+	border-bottom: 2px solid #ccc;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 14px;
+}
+
+.vote-result__submit {
+	margin-top: 30px;
+	margin-left: 10px;
+	padding: 10px 60px;
+	background-color: #ffc155;
+	cursor: pointer;
+	color: #ffffff;
+	font-size: 15px;
+	border-radius: 6px;
+}
+.vote-result__submit:disabled {
+	background-color: lightgrey;
+}
+.vote-result__submit:disabled:hover {
+	cursor: not-allowed;
+}
+
+.vote-result__question{
+	font-style: italic;
+	font-weight: bold;
+}
+
+.vote-result__description {
+	margin: .5em 0 1em 0;
+}
+
+.vote-result__diagram {
+	width: 90%;
+}
+.vote-result__diagram td {
+	padding: 10px 3px 10px 0;
+}
+
+.vote-result__diagram td:nth-child(1){
+	width: 20%;
+}
+
+.vote-result__diagram td:nth-child(2){
+	width: 75%;
+}
+
+.vote-result__box {
+	display: inline;
+	display: -moz-inline-box;
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #eee;
+	margin-right: 2px;
+	width: 10px;
+	height:15px;
+}
+
+.vote-result__percent {
+	color: #666;
+	font-size: 91%;
+
+	display: inline;
+	display: -moz-inline-box;
+	display: inline-block;
+	width: 4.5em;
+}
+
+@media screen and (max-width: 767px) {
+	.vote-result {
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+}
+
+

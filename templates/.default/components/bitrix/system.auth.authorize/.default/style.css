@@ -1,0 +1,72 @@
+.block-auth-form__error{
+	display: none;
+	margin-top: 15px;
+	color: red;
+	text-align: center;
+}
+.errortext{
+	padding-left: 30px;
+}
+@media screen and (min-width: 1200px) {
+	.stat-auth-form .window__inputs {
+		/*margin-left: 290px;*/
+	}
+	.stat-auth-form .window__input{
+		width: 340px;
+	}
+}
+
+.tszh-auth__lg-progress {
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.5) 50%, transparent 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+	animation: progressFill 6s -.1s ease-in-out forwards;
+}
+
+@-webkit-keyframes progressFill {
+	from {
+		background-position: right bottom;
+	}
+	to {
+		background-position: left bottom;
+	}
+}
+@-moz-keyframes progressFill {
+	from {
+		background-position: right bottom;
+	}
+	to {
+		background-position: left bottom;
+	}
+}
+@keyframes progressFill {
+	from {
+		background-position: right bottom;
+	}
+	to {
+		background-position: left bottom;
+	}
+}
+
+div#window-password-recovery {
+
+	margin-top: 0;
+}
+
+
+.block-password-recovery-form__error{
+	display: none;
+	margin-top: 15px;
+	color: red;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.block-password-recovery-form__account_info_sent{
+	display: none;
+	margin-top: 15px;
+	color: green;
+	text-align: center;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+}

@@ -1,0 +1,14 @@
+.breadcrumbs {
+	margin: 0 auto;
+	font-size: 12px;
+	padding-left: 35px;
+	color: grey;
+}
+.breadcrumbs__link {
+	color: grey;
+	text-decoration: none;
+}
+.breadcrumbs__arrow:before {
+	content: '\2192';
+	padding: 0 7px;
+}

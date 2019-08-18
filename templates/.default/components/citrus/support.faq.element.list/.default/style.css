@@ -1,0 +1,14 @@
+#private-issues{
+    padding-left: 20px;
+}
+.point-faq{
+    list-style:square inside;
+    padding: 5px;
+    list-style-position: outside;
+}
+.faq-element{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 23px 0;
+    background-color: #efefef;
+}

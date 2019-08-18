@@ -1,0 +1,52 @@
+@onlymobi: ~"screen and (max-width: 767px)";
+@mobi: ~"screen and (max-width: 499px), screen and (min-width: 500px) and (max-width: 767px) and (orientation: portrait)";
+@tablet: ~"screen and (min-width: 768px) and (max-width: 1199px), screen and (min-width: 500px) and (max-width: 767px) and (orientation: landscape)";
+@onlyTablet: ~"screen and (min-width: 768px) and (max-width: 1199px)";
+@desktop: ~"screen and (min-width: 1200px)";
+@tabletDesktop: ~"screen and (min-width: 768px), screen and (min-width: 500px) and (orientation: landscape)";
+.subscrip {
+	margin-top: 30px;
+}
+.subscrip label{
+	cursor: pointer;
+}
+.subscrip table {
+	margin-bottom: 25px;
+}
+.subscrip table td {
+	padding: 5px;
+}
+.subscrip table thead td {
+	font-weight: bolder;
+}
+.subscrip table thead td:last-child {
+	width: 100px;
+}
+.subscrip .input-checkbox input[type="checkbox"] + label {
+	padding: 0;
+	font-size: 20px;
+	line-height: 20px;
+}
+.subscrip .input-checkbox input[type="checkbox"] + label:before {
+	width: 24px;
+	height: 24px;
+	margin-top: -20px;
+}
+.subscrip__submit {
+	text-align: right;
+}
+@media screen and (min-width: 768px) {
+	.subscrip table tbody td:first-child {
+		text-align: left;
+		padding: 15px;
+	}
+}
+@media @mobi {
+	.subscrip {
+		margin-bottom: 30px;
+	}
+	.subscrip__submit {
+		text-align: center;
+	}
+}
+

@@ -1,0 +1,16 @@
+.b-news-detail__img{
+    margin-top: 7px;
+}
+.b-news-detail-date{
+    color: #5e5d5d;
+    background: url(images/news-date.png) no-repeat 0 50%;
+    padding-left: 15px;
+}
+
+a.file {
+    padding-left: 20px;
+    background: url(images/icon-file.png) no-repeat 0 50%;
+}
+a.file-pdf {
+    background-image: url(images/icon-pdf.png);
+}

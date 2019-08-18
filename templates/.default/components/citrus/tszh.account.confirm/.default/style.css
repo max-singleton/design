@@ -1,0 +1,25 @@
+table.pers {
+    float:left;
+}
+table.pers td {
+    text-align: center;
+}
+
+
+span.title {
+    font-size: large;
+    font-family: CenturyGothicRegular, Arial, sans-serif;
+    vertical-align: bottom;
+    padding-right: 15px;
+    
+}
+input.code {
+    height: 30px;
+    /*width: 70%;*/
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    
+}
+br.small {
+    line-height: 1em;
+}

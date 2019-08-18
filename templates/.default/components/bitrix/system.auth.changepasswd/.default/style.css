@@ -1,0 +1,17 @@
+
+@media screen and (max-width: 767px) {
+    div.bx-auth .window__input-name
+    {
+        min-height: 42px;
+        font-size: 10px;
+    }
+    div.bx-auth .window__button
+    {
+        margin: 0 0;
+    }
+    div.bx-auth .window__title
+    {
+        text-align: left;
+        
+    }
+}

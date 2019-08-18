@@ -1,0 +1,18 @@
+.find-question input{
+    margin-bottom: 7px;
+}
+.find-question button{
+    margin-bottom: 15px;
+}
+.find-question{
+}
+@media screen and (min-width: 768px){
+    .find-question input{
+        width: 200px;
+    }
+}
+@media screen and (max-width: 767px){
+    .find-question input{
+        width: 100%;
+    }
+}

@@ -1,0 +1,92 @@
+.numbers {
+  overflow: hidden;
+}
+.numbers__number {
+  font-size: 24px;
+  color: #2b5f93;
+  line-height: 140px;
+  text-align: right;
+}
+.numbers__number_bold {
+  font-weight: bold;
+}
+
+.contacts {
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid #afc8e0;
+  background-color: #e7edf3;
+  margin-top: 50px;
+  padding-bottom: 40px;
+}
+.contacts__block {
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.contacts__title{
+  font-size: 20px;
+  color: #2b5f93;
+  margin-top: 40px;
+  text-align: center;
+  width: 330px;
+  font-weight: bold;
+}
+.information__block {
+  float: left;
+  width: 33.3333%;
+}
+.contacts__items {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  color: #333;
+}
+.bold-hr {
+  width: 100%;
+  border: none;
+  background-color: #ffbb42;
+  color: #ffbb42;
+  height: 5px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+.information {
+  overflow: hidden;
+  float: left;
+}
+.contacts__item {
+  float: left;
+}
+.contacts__name {
+  color: #2b5f93;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.contacts__item {
+  font-size: 16px;
+}
+.auth-info {
+  padding-top: 100px;
+  float: left;
+}
+.auth-info__text,
+.auth-info__link {
+  font-size: 16px;
+  color: #ffffff;
+}
+.auth-info__li {
+  margin-top: 10px;
+}
+.auth-info__link {
+  text-decoration: underline;
+  /*margin-left: 15px;*/
+}
+.auth-info__ul {
+  padding: 0px;
+  list-style: none;
+}
+
+h2 em{
+  font-style: normal;
+}

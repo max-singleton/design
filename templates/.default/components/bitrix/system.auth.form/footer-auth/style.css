@@ -1,0 +1,185 @@
+.cabinet {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #709dca;
+    box-sizing: border-box;
+    padding-bottom: 35px;
+}
+.auth {
+    float: left;
+}
+.auth__form {
+    width: 330px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+}
+.auth__head {
+    font-size: 20px;
+    color: #ffffff;
+    width: 100%;
+    margin-top: 35px;
+    font-weight: bold;
+}
+.auth__inputs {
+    width: 100%;
+    margin-top: 25px;
+}
+.auth__input {
+    width: 100%;
+    height: 46px;
+    background-color: #ffffff;
+    color: #709dca;
+    font-size: 16px;
+    margin-top: 15px;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding-left: 20px;
+    padding-right: 0px;
+}
+.auth__captcha-img {
+    height: 46px;
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 0px;
+}
+.auth__input::-webkit-input-placeholder {
+    color: #709dca;
+}
+.auth__input::-moz-placeholder {
+    color: #709dca;
+}
+.auth__checkform {
+    width: 100%;
+    position: relative;
+    margin-top: 15px;
+    padding-left: 25px;
+    padding-right: 0px;
+}
+.auth__checkbox {
+    display: none;
+}
+.auth__checkbox:checked + .checkbox__text:after {
+    outline: 1px solid #939598;
+    border: 2px solid #fff;
+    width: 20px;
+    height: 20px;
+    background-color: #63849F;
+}
+.checkbox__text {
+    color: #ffffff;
+    font-weight: normal;
+    cursor: pointer;
+    font-size: 14px;
+}
+.checkbox__text:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    box-sizing: border-box;
+}
+.auth__checkbutton {
+    overflow: hidden;
+    margin-top: 15px;
+}
+.auth__button {
+    height: 46px;
+    background-color: #ffbb42;
+    font-size: 16px;
+    color: #2b5f93;
+    margin: 0 auto;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.tszh-auth__lg-progress {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5) 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    animation: progressFill 6s -.1s ease-in-out forwards;
+}
+@-webkit-keyframes progressFill {
+    from {
+        background-position: right bottom;
+    }
+    to {
+        background-position: left bottom;
+    }
+}
+@-moz-keyframes progressFill {
+    from {
+        background-position: right bottom;
+    }
+    to {
+        background-position: left bottom;
+    }
+}
+@keyframes progressFill {
+    from {
+        background-position: right bottom;
+    }
+    to {
+        background-position: left bottom;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .cabinet {
+        width: 1200px;
+    }
+    .auth {
+        width: 33.3333%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .cabinet {
+        width: 768px;
+        margin-bottom: 50px;
+        margin-top: 33px;
+    }
+    .auth {
+        width: 49%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .cabinet {
+        width: 320px;
+        /*margin-top: 35px;*/
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .auth {
+        width: 100%;
+    }
+    .auth__form {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    .auth__head {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+    .auth__input {
+        height: 40px;
+        font-size: 14px;
+    }
+    .checkbox__text {
+        font-size: 12px;
+    }
+    .auth__button {
+        font-size: 14px;
+    }
+}

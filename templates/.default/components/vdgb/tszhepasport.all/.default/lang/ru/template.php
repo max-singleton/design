@@ -1,0 +1,36 @@
+<?
+$MESS['TSZH_SHEET_PERIOD'] = "Период";
+$MESS['TSZH_SHEET_DEBT'] = "Задолженность";
+$MESS['TSZH_SHEET_BEG'] = "на начало периода";
+$MESS['TSZH_SHEET_END'] = "на конец периода";
+$MESS['TSZH_SHEET_SUMM'] = "Начислено";
+$MESS["TSZH_SHEET_CORRECTIONS"] = "Перерасчеты";
+$MESS['TSZH_SHEET_SUMMPAYED'] = "Оплачено";
+$MESS['TSZH_SHEET_CLICK_TO_SHOW'] = "Кликните, чтобы посмотреть услуги, начисленные за месяц";
+$MESS['TSZH_SHEET_SERVICE'] = "Услуга";
+$MESS['TSZH_SHEET_TO_PAY'] = "К оплате";
+$MESS['TSZH_SHEET_NO_CHARGES'] = "У вас нет начислений.";
+$MESS['TSZH_SHEET_NO_DATA'] = "Нет данных для отображения.";
+$MESS['TSZH_SHOW_RECEIPT'] = "квитанция";
+$MESS['TSZH_SHOW_RECEIPT_LONG'] = "Посмотреть квитанцию на оплату";
+
+$MESS['TSZH_CHARGES_YANDEX_PAYMENT_DESCR'] = "за услуги ЖКХ по л/с № #ACCOUNT_NUMBER# за #PREV_MONTH#";
+$MESS["CITRUS_TSZHPAYMENT_LINK"] = "<p>Вы можете <a href=\"#LINK#\">оплатить коммунальные услуги</a> онлайн.</p>";
+$MESS['HOUSES_IN_SERVICE'] = "Дома в управлении";
+$MESS['HOUSES_OUT_OF_SERVICE'] = "Обслуживание прекращено";
+$MESS["ADRESS_SEARCH"] = "Поиск по адресу";
+$MESS['TYPE_OF_HOUSE'] = "Тип дома: ";
+$MESS["SUMM_COM_AREA"] = "Общая площадь: ";
+$MESS["FLOORS"] = "Количество этажей: ";
+$MESS["PORCHES"] = "Количество подъездов: ";
+$MESS["YEAR_OF_BUILT"] = "Год постройки: ";
+$MESS["YEAR_OF_COMMISSIONING"] = "Год начала обслуживания дома: ";
+$MESS["DETAIL"] = "Подробная информация";
+$MESS["HOUSE"] = "Дом ";
+$MESS["MKD"] = "МКД";
+$MESS["GD"] = "ЖД";
+$MESS["MAIN_HOUSE_INFORMATION"] = "Общая информация о доме";
+$MESS["DATA_NOT_SET"] = "<не указано>";
+$MESS["WARNING_PART_1"] = "В процессе определения координат ";
+$MESS["WARNING_PART_2"] = " домов c адресами: <b>";
+$MESS["WARNING_PART_3"] = "</b><br> произошли ошибки, рекомендуется верно заполнить адреса домов или <a href='https://n.maps.yandex.ru/' target='_blank'>добавить дом вручную на Яндекс.Карты </a>, если на карте его нет";

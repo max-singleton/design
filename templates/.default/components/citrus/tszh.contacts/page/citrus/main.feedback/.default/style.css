@@ -1,0 +1,100 @@
+.height-textarea{
+	height: 73px;
+	width: 100%;
+}
+.feedback-captcha__img img{
+	vertical-align: top;
+	height: 33px;
+	margin-bottom: 7px;
+	width: calc(100% - 5px);
+}
+
+.feedback-captcha__img {
+	width: 50%;
+	display: inline-block;
+}
+.feedback-captcha__input {
+	width: 50%;
+	display: inline-block;
+}
+
+@media screen and (max-width: 767px)
+{
+	.feedback-captcha__input {
+		width: 48%;
+	}
+	input .captcha {
+		padding-left: 5px !important;
+	}
+	.feedbackForm__confirm {
+		font-size: 12px;
+	}
+}
+
+input.name, input.mail, textarea.text-mail, input.captcha {
+	width: 100%;
+	padding-left: 35px;
+}
+
+@media screen and (min-width: 768px) {
+	.feedback-captcha {
+		display: flex;
+	}
+	#contacts-page-feedback .left-fields-container {
+		float: left;
+		width: 350px;
+	}
+	#contacts-page-feedback .right-fields-container {
+		margin-left: 365px;
+	}
+	.feedback-captcha__input{
+		text-align: right;
+		width: 250px;
+	}
+	.feedback-captcha__input input{
+		width: 100% !important;
+	}
+}
+
+#contacts-page-feedback {
+	overflow: hidden;
+}
+#contacts-page-feedback h3 {
+	margin: 35px 0 20px;
+	padding: 0;
+	font-size: 18px;
+	line-height: 100%;
+}
+#contacts-page-feedback div.mf-name,
+#contacts-page-feedback div.mf-email,
+#contacts-page-feedback div.mf-captcha,
+#contacts-page-feedback div.mf-message {width:80%; padding-bottom:0.4em;}
+#contacts-page-feedback div.mf-name input,
+#contacts-page-feedback div.mf-email input {width:60%;}
+#contacts-page-feedback div.mf-message textarea {width: 60%;}
+#contacts-page-feedback span.mf-req {color:red;}
+#contacts-page-feedback div.mf-ok-text {color:green; font-weight:bold; padding-bottom: 1em;}
+
+#contacts-page-feedback .left-fields-container td {
+	border: none;
+}
+#contacts-page-feedback button[type="submit"] {
+	float: right;
+}
+
+input.name {
+	background: #f2f2f2 url(images/name.png) no-repeat 8px center;
+}
+input, textarea {
+	margin-bottom: 7px;
+}
+
+.feedbackForm__confirm .input-checkbox {
+	float: left;
+
+}
+
+.feedback-checkbox input[type=checkbox]+label {
+	padding-left: 0px !important;
+	line-height: 18px !important;
+}

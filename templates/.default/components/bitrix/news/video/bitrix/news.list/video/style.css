@@ -1,0 +1,22 @@
+.video-items {
+
+}
+.video-items .video {
+	*display: inline;
+	display: -moz-inline-box;
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 30px 10px 0;
+	margin: 0;
+	width: 155px;
+}
+.video-items .video a.video-preview {
+	display: -moz-inline-box;
+}
+.video-items .video-preview img {
+	border: none !important;
+}
+.video-items .video-date, .video-items .video-duration, .video-items .video-link{
+	font-size: 11px;
+	line-height: 13px;
+}

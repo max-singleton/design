@@ -1,0 +1,140 @@
+@onlymobi: ~"screen and (max-width: 767px)";
+@mobi: ~"screen and (max-width: 499px), screen and (min-width: 500px) and (max-width: 767px) and (orientation: portrait)";
+@tablet: ~"screen and (min-width: 768px) and (max-width: 1199px), screen and (min-width: 500px) and (max-width: 767px) and (orientation: landscape)";
+@desktop: ~"screen and (min-width: 1200px)";
+@tabletDesktop: ~"screen and (min-width: 768px), screen and (min-width: 500px) and (orientation: landscape)";
+.arrow-back{
+    width: 35px;
+    height: 15px;
+    margin-right: 10px;
+}
+.table {
+    display: table;
+    border: 1px solid #8cb7e3;
+    /*border-radius: 6px;*/
+    border-spacing: 0;
+    width: 100%;
+}
+.table .table__row,
+.table tbody > tr {
+    display: table-row;
+}
+.table .table__row:last-child .table__cell,
+.table tbody > tr:last-child .table__cell,
+.table .table__row:last-child td,
+.table tbody > tr:last-child td {
+    border-bottom: none;
+}
+.table .table__cell,
+.table td {
+    display: table-cell;
+    height: 100%;
+    /*border-right: 1px solid @font-main;*/
+    border-bottom: 1px solid #8cb7e3;
+    /*text-align: center;*/
+    vertical-align: middle;
+    padding: 3px 5px;
+}
+.table .table__cell:nth-child(n+2),
+.table td:nth-child(n+2) {
+    border-left: 1px solid #8cb7e3;
+}
+
+.main-bg, .border_image{
+    background-color: #305fb6;
+}
+#menu-area{
+    width: 250px;
+    position: relative;
+}
+.content__padding .div-flex>.visible-desktop{
+    margin-right: 240px;
+}
+.menu-item{
+    position: inherit;
+    height: 80px;
+}
+.menu-item.main{
+    font-weight: bold;
+}
+#border_left, #image-focused{
+    top: 0;
+}
+.subsection h4{
+    width: auto;
+}
+@media @desktop{
+    .home-adress{
+        width: 1188px;
+        height: auto;
+        margin-left: -10px;
+        margin-top: -10px;
+        padding: 30px 0px 40px 12px;
+    }
+    .menu-area{
+        position: fixed;
+    }
+    .page-desktop-height{
+        height: 800px;
+    }
+    .fix-desktop{
+        position: fixed;
+    }
+    .fix-desktop_page{
+        width: 1200px;
+        margin-left: -10px;
+        background-color: white;
+        margin-bottom: 20px;
+    }
+    .page-house-info{
+        margin-top: 35px;
+    }
+    .page-overflow{
+        overflow: auto;
+    }
+    .subsection__item:last-child div{
+        border-bottom: 1px solid;
+    }
+    .subsection__info{
+        display: table-row;
+    }
+    .subsection__info>div{
+        display: table-cell;
+    }
+}
+
+.bordered td, .bordered th{
+    padding: 3px;
+}
+
+h2{
+    clear: left;
+}
+
+@media screen and (max-width: 1199px){
+
+    .mobi-overflow{
+        overflow: auto;
+    }
+    .house-image{
+        display: none;
+    }
+}
+
+@media @mobi{
+    .subsection__item{
+        border: 1px solid #dddddd;
+        margin-bottom:7px;
+        border-radius: 4px;
+    }
+    .item {
+        float: none;
+        border: none;
+        width: auto;
+        text-align: left;
+        height: 40px;
+    }
+    .house-image{
+        display: none;
+    }
+}

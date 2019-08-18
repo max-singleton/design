@@ -1,0 +1,180 @@
+.citrus-tszh-payment {
+	width: 80%;
+}
+
+table.citrus-tszh-payment-form {
+	width: 100%;
+    margin: 1em 0;
+}
+table.citrus-tszh-payment-form td:first-child {
+    width: 25%;
+    white-space: nowrap;
+    text-align: right;
+    padding-right: 15px;
+}
+table.citrus-tszh-payment-form .styled {
+    width: 100%;
+    margin-bottom: 7px;
+}
+
+.citrus-tszh-payment-form select.styled {
+    -moz-box-sizing: border-box; /*Firefox 1+*/
+    -webkit-box-sizing: border-box; /*Safari 3+, Chrome 1+*/
+    box-sizing: border-box; /*Opera 7+, IE8+*/
+    background:#f2f2f2;
+    padding-left:8px;
+    border:1px solid #ccc;
+    margin-bottom:7px;
+    font-size:14px; color:#333;vertical-align:middle;
+
+    height: 33px;
+    line-height: 33px;
+}
+.citrus-tszh-payment-form .styled::-webkit-input-placeholder { color: #999; font-style: italic; }
+.citrus-tszh-payment-form .styled:-moz-placeholder { color: #999; font-style: italic; }
+.citrus-tszh-payment-form option[default] { display: none }
+.citrus-tszh-payment-form input.styled[disabled] {
+    color: #999;
+    background: none;
+}
+
+.citrus-tszh-payment .note {
+	background-color: #dff0d8;
+	border: 1px solid #d6e9c6;
+	color: #3c763d;
+
+	margin: 1em 0;
+	padding: 1em 1.2em;
+}
+
+.payment-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.payment-form p {
+    padding: 0;
+    margin: 0;
+}
+.payment-form__input {
+    width: 95px;
+    color: #2b5f93;
+    text-align: center;
+    font-size: inherit;
+    border-bottom: 1px solid #2b5f93;
+}
+
+
+.citrus-tszh-payment-form select.styled {
+    -moz-box-sizing: border-box; /*Firefox 1+*/
+    -webkit-box-sizing: border-box; /*Safari 3+, Chrome 1+*/
+    box-sizing: border-box; /*Opera 7+, IE8+*/
+    background:#f2f2f2;
+    padding-left:8px;
+    border:1px solid #ccc;
+    margin-bottom:7px;
+    font-size:14px; color:#333;vertical-align:middle;
+    
+    height: 33px;
+    line-height: 33px;
+}
+.citrus-tszh-payment-form .styled::-webkit-input-placeholder { color: #999; font-style: italic; }
+.citrus-tszh-payment-form .styled:-moz-placeholder { color: #999; font-style: italic; }
+.citrus-tszh-payment-form option[default] { display: none }
+.citrus-tszh-payment-form input.styled[disabled] {
+    color: #999;
+    background: none;
+}
+
+.citrus-tszh-payment .note {
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    color: #3c763d;
+    
+    margin: 1em 0;
+    padding: 1em 1.2em;
+}
+.is-budget__note {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    white-space: normal;
+    text-align: left;
+}
+.is-budget__label {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+/*the container must be positioned relative:*/
+.tszh-payment-select {
+    position: relative;
+    margin-bottom: 7px;
+}
+.tszh-payment-select select {
+    display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+    box-sizing: border-box;
+    background: #f2f2f2;
+    padding-left: 8px;
+    border: 1px solid #ccc !important;
+    font-size: 14px;
+    color: #333 !important;
+    vertical-align: middle;
+    text-align: left;
+    white-space: normal;
+    width: 100%;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #333 transparent transparent transparent;
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #333 transparent;
+    top: 7px;
+}
+.select-items {
+    background: #f2f2f2;
+    border: 1px solid #ccc !important;
+    font-size: 14px;
+    max-width: 100%;
+    text-align: left;
+}
+.select-items div {
+    word-break: break-word;
+    line-break: auto;
+    white-space: normal;
+    width: 100%;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+    color: #333 !important;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+/*style items (options):*/
+.select-items {
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,11 @@
+.documents-search-form input{
+    width: 300px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+@media screen and (max-width:767px) {
+    .documents-search-form input{
+        width: 100%;
+        margin-bottom: 7px;
+    }
+}

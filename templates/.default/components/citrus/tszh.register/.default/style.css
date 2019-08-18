@@ -1,0 +1,149 @@
+.window__fieldgroup {
+	font-size: 20px;
+	color: #464545;
+	text-align: center;
+	padding: 15px;
+	box-sizing: border-box;
+
+}
+
+.block-register-form_captcha img {
+	width: 180px;
+	height: 40px;
+}
+.block-register-form_captcha {
+	width: 230px !important;
+	padding-top: 7px !important;
+}
+
+.block-register-form_captcha_input {
+	width: 290px;
+}
+
+.register__confirm {
+	margin-left: 40px;
+	margin-right: 40px;
+	width: auto !important;
+}
+
+.register__confirm .input-checkbox {
+	float: left;
+}
+
+.register__confirm input[type=checkbox]+label {
+	padding-left: 0px !important;
+	line-height: 18px !important;
+}
+
+.block-register-form__error {
+	color: red;
+	margin-left: 143px;
+	float: left;
+	font-size: 14px;
+}
+
+.block-register-form__error_main {
+	color: red;
+	float: left;
+	margin: 0px 15px 10px;
+	text-align: center;
+}
+
+.form__error_main_add {
+	text-align: center;
+	padding: 10px;
+	width: auto !important;
+}
+.block-register-form__register_email
+{
+	float: left;
+	margin: 15px 20px 35px 20px;
+	text-align: center;
+}
+
+.block-register-form__note {
+	margin-left: 143px;
+	float: left;
+	font-size: 12px;
+}
+
+.block-register-form .window__input-name {
+	height: 70px;
+}
+
+@media screen and (max-width: 767px) {
+	.block-register-form__error {
+		margin-left: 80px;
+		font-size: 10px;
+	}
+	.window__input-name {
+		height: 34px;
+	}
+	.block-register-form__note {
+		margin-left: 80px;
+		font-size: 8px;
+	}
+	.block-register-form .window__input-name {
+		height: 40px;
+	}
+	.block-register-form_captcha {
+		width: 120px !important;
+		padding-top: 0px !important;
+	}
+	.block-register-form_captcha img {
+		width: 100px;
+		height: 24px;
+	}
+	.block-register-form_captcha_input {
+		width: 180px !important;
+
+	}
+	.window__fieldgroup {
+		font-size: 15px;
+	}
+	.block-register-form__register_email {
+		font-size: 15px;
+	}
+	label#descr {
+		font-size: 10px;
+		margin-left: 80px;
+	}
+	.block-register-form__error_main {
+		font-size: 15px;
+	}
+}
+
+div#window-register {
+	margin-top: 40px !important;
+}
+
+.window__register_field {
+	text-align: center;
+}
+
+label#descr {
+	position: absolute;
+	top: 0px;
+	text-align: right;
+	width: 200px;
+	display: block;
+	margin-left: 312px;
+	overflow: hidden;
+	white-space: nowrap;
+	color: #858585;
+	font-size: 14px;
+	line-height: 50px;
+}
+
+@media screen and (max-width: 767px) {
+	label#descr {
+		width: 75px;
+		margin-left: 200px;
+		font-size: 11px;
+		line-height: 24px;
+
+	}
+	.window__block.register__confirm {
+		font-size: 12px;
+	}
+}

@@ -1,0 +1,17 @@
+.table {
+	width: 100%;
+}
+.table__row_head {
+	background-color: #efefef;
+}
+.table__cell {
+	text-align: center;	
+}
+
+.table__cell_head {
+	padding: 15px 5px !important;
+}
+
+.table,.table th,.table td{
+	border-color: #d1e0ee !important;
+}
