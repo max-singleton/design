@@ -1,3 +1,68 @@
+
+
+</div>
+    </div>
+</div>
+    <!-- Контент. Конец -->
+	
+    <!-- Включение входа в личный кабинет -->
+	<div class="container bg-color-png auth" <?php if ($USER->IsAuthorized()) echo 'style="display:none"' ?>>
+        <div class="row auth__content justify-space-beetwen">
+            <div class="col-xl-6 auth__left" >
+                <p class="text-nov color-white" style="color: #FFFFFF">ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ</p>
+                <form action="">
+                    <div class="container form">
+                        <div class="row col-xs-9 col-xl-12">
+                            <div class="col-xl-6 col-xs-12 form-group">
+                                <label for="login">Логин</label>
+                                <input type="text" name="login" id="login" placeholder="Ваш логин">
+                            </div>
+                            <div class="col-xl-6 col-xs-12 form-group">
+                                <label for="password">Пароль</label>
+                                <input type="password" name="password" id="password" placeholder="Введите пароль">
+                            </div>
+                        </div>
+                        <div class="row col-xs-9 col-xl-12">
+                            <div class="col-xl-6 form-group-2">
+                                <input type="checkbox" name="RadBut" id="" checked>
+                                <label for="RadBut">Запомнить меня</label>
+                            </div>
+                            <div class="col-xl-6 form-group-2 text-align-right">
+                                <a class="return_pasword" href="">Забыл пароль</a>
+                            </div>
+                        </div>
+                        <div class="row col-xs-9 col-xl-12 auth__panel">
+                            <div class="col-xl-5">
+                                <button type="submit">Войти</button>
+                            </div>
+                            <div class="col-xl-7 ">
+                                <p class="messadge">У вас нет логина и пароля? Вы можете <a
+                                        href="regisration">зарегистрироваться</a> прямо сейчас.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xl-6 kabinet_right">
+                <p class="kabinet-text">Уважаемые пользователи, для входа на наш новый сайт достояние-наследие.рф логин
+                    и пароль с сайта etker21.ru не подходит. Для удобного пользования возможностями сайта и личным
+                    кабинетом вам
+                    необходимо заново пройти регистрацию на сайте. </p>
+                <p class="kabinet-zag">После входа в личный кабинет на сайте вы сможете:</p>
+                <ul>
+                    <li class="spisok-items">Посмотреть баланс лицевого счета</li>
+                    <li class="spisok-items">Передать показания</li>
+                    <li class="spisok-items"> Распечатать квитанцию</li>
+                    <li class="spisok-items"> Задать вопрос руководству ЖКХ
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
 <?php
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 ?>
@@ -45,7 +110,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
             
                     <div class="col-xl-3 col-md-11 offset-md-1 col-xs-12 offset-xl-0 btn-but">
                             <div class="col-xl-12 col-md-5 btn-but-1"> <a href="/vopros/"style="color: #fff">Задать вопрос</a> </div>
-                            <div class="col-xl-12 col-md-5 push-md-1 push-xl-0 btn-but-2"><a href="/personal/" style="color: #fff">Личный кабинет</a></div>
+                            <div class="col-xl-12 col-md-5 push-md-1 push-xl-0 btn-but-2"><a href="/personal/info" style="color: #fff">Личный кабинет</a></div>
                         </div>
             </div>
 
@@ -90,9 +155,10 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
             </div>
             <div class="mobile-menu__nav mobile-menu__auth">
                 <li class="mobile-menu__nav-items">
-					<a class="window-open " href="javascript:void(0)" window="window-auth" init="true">ВХОД В ЛИЧНЫЙ КАБИНЕТ</a>
+					<?php if (!($USER->IsAuthorized())) echo '<a class="window-open" href="javascript:void(0)" window="window-auth" init="true">ВХОД В ЛИЧНЫЙ КАБИНЕТ</a>' ?>
+					<?php if ($USER->IsAuthorized()) echo '<a href="/personal/info">ВХОД В ЛИЧНЫЙ КАБИНЕТ</a>' ?>
 				</li>
-                <li class="mobile-menu__nav-items">
+                <li class="mobile-menu__nav-items" <?php if ($USER->IsAuthorized()) echo 'style="display:none"'?>>
 					<a class="window-open" href="javascript:void(0)" window="window-register" init="true">РЕГИСТРАЦИЯ</a>
 				</li>
             </div>

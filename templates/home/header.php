@@ -56,21 +56,21 @@ define('SHOW_NAV_CHAIN_DEFAULT', !IS_SITE_DIR && $APPLICATION->GetProperty('show
 <body class="page">
 <div id="panel"><?$APPLICATION->ShowPanel();?></div>
 
-<div class="top-line">
+	<div class="top-line" style="height:0px">
 			<div class="top-line__box">
-				<!--noindex--><?
+<!--noindex--><?
 				$APPLICATION->IncludeComponent(
-	"bitrix:system.auth.form", 
-	"header-auth", 
-	array(
-		"REGISTER_URL" => SITE_DIR."auth/?register=yes",
-		"FORGOT_PASSWORD_URL" => SITE_DIR."auth/?forgot_password=yes",
-		"PROFILE_URL" => SITE_DIR.PATH_PERSONAL."/info/",
-		"SHOW_ERRORS" => "Y",
-		"COMPONENT_TEMPLATE" => "header-auth"
-	),
-	false
-);
+								"bitrix:system.auth.form", 
+								"header-auth", 
+								array(
+									"REGISTER_URL" => SITE_DIR."auth/?register=yes",
+									"FORGOT_PASSWORD_URL" => SITE_DIR."auth/?forgot_password=yes",
+									"PROFILE_URL" => SITE_DIR.PATH_PERSONAL."/info/",
+									"SHOW_ERRORS" => "Y",
+									"COMPONENT_TEMPLATE" => "header-auth"
+								),
+								false
+							);
 				?><!--/noindex-->
 			</div>
 		</div>
@@ -142,11 +142,12 @@ define('SHOW_NAV_CHAIN_DEFAULT', !IS_SITE_DIR && $APPLICATION->GetProperty('show
                 <div class="row menu">
                     <div class="col-xl-8 col-md-12 navig nav">
                     </div>
-                    <div class="col-xl-4 col-md-12 navig-2">
+					<div class="col-xl-4 col-md-12 navig-2">
                         <li class="navigation-items">
                             <img class="vector" src="<?= DEFAULT_TEMPLATE_PATH ?>/img/Vector.png" alt="">
-                            <a class="window-open " href="javascript:void(0)" window="window-auth" init="true">ВХОД В ЛИЧНЫЙ КАБИНЕТ</a>
-                        <li class="navigation-items">
+							<?php if (!($USER->IsAuthorized())) echo '<a class="window-open" href="javascript:void(0)" window="window-auth" init="true">ВХОД В ЛИЧНЫЙ КАБИНЕТ</a>' ?>
+							<?php if ($USER->IsAuthorized()) echo '<a href="/personal/info">ВХОД В ЛИЧНЫЙ КАБИНЕТ</a>' ?>
+							<li class="navigation-items" <?php if ($USER->IsAuthorized()) echo 'style="display:none"'?>>
                             <img class="vector" src="<?= DEFAULT_TEMPLATE_PATH ?>/img/Vector-pencil.svg" alt="">
                         <a class="window-open" href="javascript:void(0)" window="window-register" init="true">РЕГИСТРАЦИЯ</a>
 						</li>
@@ -318,7 +319,7 @@ define('SHOW_NAV_CHAIN_DEFAULT', !IS_SITE_DIR && $APPLICATION->GetProperty('show
     <div class="container">
         <div class="row">
             <div class="col-xl-6 buttons">
-                <a class="button-1" href="/personal/" id="ShowHide1">Передать показания счетчиков</a>
+                <a class="button-1" href="/personal/meters/" id="ShowHide1">Передать показания счетчиков</a>
                 <a class="button-2" href="/vopros/" id="ShowHide2">Задать свой вопрос</a>
             </div>			
             <div class="col-xl-6 page-neizv ">
@@ -372,12 +373,12 @@ define('SHOW_NAV_CHAIN_DEFAULT', !IS_SITE_DIR && $APPLICATION->GetProperty('show
                 </div>
             </div>
             <div class="col-xl-5">
-                <p class="text-nov-a"><a href="http://лк.достояние-наследие.рф/news.php">ВСЕ НОВОСТИ</a> </p>
+                <p class="text-nov-a"><a href="/news/">ВСЕ НОВОСТИ</a> </p>
                 <div class="page-nov">
                     <div class="page-item page-item-all">
                         <p>Новый сайт достояние-наследие.рф</p>
                         <p>Для удобного пользования возможностями сайта и личным кабинетом вам необходимо заново пройти регистрацию на сайте.</p>
-                        <a href="/news.php" class="page-a">Читать новость<img class="vector" src="<?= DEFAULT_TEMPLATE_PATH ?>/img/Vector-right.svg"
+                        <a href="/news/" class="page-a">Читать новость<img class="vector" src="<?= DEFAULT_TEMPLATE_PATH ?>/img/Vector-right.svg"
                                 alt=""></a>
                     </div>
                     </div>
@@ -386,7 +387,7 @@ define('SHOW_NAV_CHAIN_DEFAULT', !IS_SITE_DIR && $APPLICATION->GetProperty('show
         </div>
 	
     <!-- Включение входа в личный кабинет -->
-	<div class="container bg-color-png auth">
+	<div class="container bg-color-png auth" <?php if ($USER->IsAuthorized()) echo 'style="display:none"' ?>>
         <div class="row auth__content justify-space-beetwen">
             <div class="col-xl-6 auth__left" >
                 <p class="text-nov color-white" style="color: #FFFFFF">ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ</p>

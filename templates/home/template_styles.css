@@ -509,7 +509,7 @@ button, input, textarea {
 }
 .window {
     z-index: 1000;
-    background-color: #f4f4f4;
+    background-color: #fff;
     width: 680px;
     overflow: hidden;
     left: 50%;
@@ -783,7 +783,7 @@ button, input, textarea {
         width: 200px;
         border-bottom: 1px solid #e7e7e7;
         height: 24px;
-        background-color: #f4f4f4;
+        background-color: #fff;
         padding-left: 7px;
         font-size: 11px
     }
@@ -798,7 +798,7 @@ button, input, textarea {
         width: 10px;
         height: 10px;
         border-bottom: 1px solid #e7e7e7;
-        background-color: #f4f4f4;
+        background-color: #fff;
         position: absolute;
         top: 6px;
         left: 90px

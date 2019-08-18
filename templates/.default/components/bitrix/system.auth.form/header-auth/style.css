@@ -1,3 +1,9 @@
+.window{
+background-color: #fff;
+}
+form{
+max-width: 100%;
+}
 .block-auth-form__error{
 	display: none;
 	margin-top: 15px;
