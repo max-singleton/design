@@ -247,18 +247,18 @@ define('SHOW_NAV_CHAIN_DEFAULT', !IS_SITE_DIR && $APPLICATION->GetProperty('show
                 <nav role="navigation">
                     <ul id="ul">
                         <li><a href="/">ГЛАВНАЯ</a></li>
-                        <li><a href="/about/">О КОМПАНИИ</a>
+                        <li><a href="/company/about.php">О КОМПАНИИ</a>
                             <ul class="submenu">
-                                <li><a href="/news/">Новости</a></li>
+                                <li><a href="/company/news.php">Новости</a></li>
                                 <li><a href="/company/services.php">Услуги</a></li>
                                 <li><a href="/company/jobs.php">Вакансии</a></li>
                                 <li><a href="/company/paid_services.php">Платные работы</a></li>
                                 <li><a href="/company/docs.php">Документы</a></li>
                             </ul>
                         </li>
-                        <li><a href="/contacts/">КОНТАКТНАЯ ИНФОРМАЦИЯ</a>
+                        <li><a href="/contacts/grafik-raboty.php">КОНТАКТНАЯ ИНФОРМАЦИЯ</a>
                             <ul class="submenu" style="padding-inline-start: 60px;">
-                                <li><a href="/contacts/">График работы</a></li>
+                                <li><a href="/contacts/grafik-raboty.php">График работы</a></li>
                                 <li><a href="/contacts/requisites.php">Реквизиты</a></li>
                             </ul>
                         </li>

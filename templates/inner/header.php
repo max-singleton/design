@@ -1,4 +1,15 @@
 <?php
+//Определение каталога для использования во включаемой области, чтобы подключить подменю
+  $url  = @( $_SERVER["HTTPS"] != 'on' ) ? 'http://'.$_SERVER["SERVER_NAME"] :  'https://'.$_SERVER["SERVER_NAME"];
+  $url .= ( $_SERVER["SERVER_PORT"] != 80 ) ? ":".$_SERVER["SERVER_PORT"] : "";
+  $url .= $_SERVER["REQUEST_URI"];
+  $str = parse_url($url);
+  $str = $str['path'];
+  $str = explode('/', $str);
+  $category = $str[1];
+?>
+
+<?php
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
 {
 	die();
@@ -54,7 +65,7 @@ define('SHOW_NAV_CHAIN_DEFAULT', !IS_SITE_DIR && $APPLICATION->GetProperty('show
 </head>
 
 <body class="page">
-
+<div id="panel"><?$APPLICATION->ShowPanel();?></div>
 <div class='promo'>
     <div class="container" style="background:#4A76A8; max-width: 100%;">
         <!-- Включение header -->
@@ -200,18 +211,18 @@ define('SHOW_NAV_CHAIN_DEFAULT', !IS_SITE_DIR && $APPLICATION->GetProperty('show
                 <nav role="navigation">
                     <ul id="ul">
                         <li><a href="/">ГЛАВНАЯ</a></li>
-                        <li><a href="/about/">О КОМПАНИИ</a>
+                        <li><a href="/company/about.php">О КОМПАНИИ</a>
                             <ul class="submenu">
-                                <li><a href="/news/">Новости</a></li>
+                                <li><a href="/company/news.php">Новости</a></li>
                                 <li><a href="/company/services.php">Услуги</a></li>
                                 <li><a href="/company/jobs.php">Вакансии</a></li>
                                 <li><a href="/company/paid_services.php">Платные работы</a></li>
                                 <li><a href="/company/docs.php">Документы</a></li>
                             </ul>
                         </li>
-                        <li><a href="/contacts/">КОНТАКТНАЯ ИНФОРМАЦИЯ</a>
+                        <li><a href="/contacts/grafik-raboty.php">КОНТАКТНАЯ ИНФОРМАЦИЯ</a>
                             <ul class="submenu" style="padding-inline-start: 60px;">
-                                <li><a href="/contacts/">График работы</a></li>
+                                <li><a href="/contacts/grafik-raboty.php">График работы</a></li>
                                 <li><a href="/contacts/requisites.php">Реквизиты</a></li>
                             </ul>
                         </li>
@@ -249,10 +260,33 @@ define('SHOW_NAV_CHAIN_DEFAULT', !IS_SITE_DIR && $APPLICATION->GetProperty('show
 	<!-- Контент. Начало -->
 <div class="container bg-gray">
     <div class="row o-company">
-        <div class="col-xl-5">
-            <div class="zagolovok">О компаниях ООО «Достояние» и ООО «Наследие»</div><br>
+        <div class="col-xl-3">
+
+
+<?$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
+	"",
+	Array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "/$category/submenu.php"
+	)
+);?>
+
+
+
+
+
+
+            <!--<div class="zagolovok">О компаниях ООО «Достояние» и ООО «Наследие»</div><br>
             <div class="text-1">Наша главная цель - удовлетворение потребностей населения, проживающего на
-                территории,обслуживаемой нашими компаниями</div>
+                территории,обслуживаемой нашими компаниями</div>-->
+
+
+
+
         </div>
-        <div class="col-xl-7">
+		<div class="col-xl-1"></div>
+        <div class="col-xl-8">
 <p class="text-2"></p>
