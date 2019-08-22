@@ -44,11 +44,13 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
                     </div>
             
                     <div class="col-xl-3 col-md-11 offset-md-1 col-xs-12 offset-xl-0 btn-but">
-                            <div class="col-xl-12 col-md-5 btn-but-1">
-                                <a href="ask.php" style="color:#fff" id="ShowHide3">Задать вопрос</a>
+                            <div class="col-xl-12 col-md-5 btn-but-1 zadat-vopros-footer">
+								<a href="/vopros/" style="color:#fff" id="ShowHide3">Задать вопрос</a>
                             </div>
-                            <div class="col-xl-12 col-md-5 push-md-1 push-xl-0 btn-but-2">
-                                <a href="lk.php" style="color:#fff" id="ShowHide4">Личный кабинет</a>
+                            <div class="col-xl-12 col-md-5 push-md-1 push-xl-0 btn-but-2 lk-footer">
+								<?php if (!($USER->IsAuthorized())) echo '<a class="window-open" href="javascript:void(0)" window="window-auth" init="true" style="color:#fff" id="ShowHide4">Личный кабинет</a>' ?>
+								<?php if ($USER->IsAuthorized()) echo '<a href="/personal/info" style="color:#fff" id="ShowHide4">Личный кабинет</a>' ?>
+
                             </div>
                     </div>
 
