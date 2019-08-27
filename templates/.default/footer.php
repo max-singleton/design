@@ -1,4 +1,4 @@
-<?php
+</div></div><?php
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 ?>
 <!-- Включение футера -->
@@ -10,10 +10,10 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
                                 <a href="/" class="podmenu-1">Главная</a>
                             </div>
                         <div class="col-xl-4 col-md-6  menu-footer-items">
-                                <a href="/about/" class="podmenu-1">О компании</a>
+                                <a href="/company/about.php" class="podmenu-1">О компании</a>
                                 <div class="row podmenu__col">
                                     <div class="col-xl-6 podmenu__links p0">
-                                        <a href="/news/" class="podmenu">Новости</a>
+                                        <a href="/company/news.php" class="podmenu">Новости</a>
                                         <a href="/company/services.php" class="podmenu">Услуги</a>
                                     </div>
                                     <div class="col-xl-6 podmenu__links p0 ">
@@ -34,9 +34,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
                                 </div>
                             
                         <div class="col-xl-3 col-md-6  menu-footer-items">
-                                <a href="/contacts/" class="podmenu-1">Контакты</a>
+                                <a href="/contacts/grafik-raboty.php" class="podmenu-1">Контакты</a>
                                 <div class="podmenu__links">
-                                    <a href="/contacts/" class="podmenu">График работы</a>
+                                    <a href="/contacts/grafik-raboty.php" class="podmenu">График работы</a>
                                     <a href="/contacts/requisites.php" class="podmenu"> Реквизиты</a>
                                 </div>
                             </div>
@@ -144,7 +144,25 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 	
     <!-- Скрипты-велосипеды для главной страницы -->
 	<script src="<?= DEFAULT_TEMPLATE_PATH ?>/js/myScriptsHomePage.js"></script>
-
+<script>
+/*При наведении на одну из кнопок другая кнопка меняет цвет в футере*/
+$(document).ready( function () {
+    $(function () {
+        $("#ShowHide3").css({"background":"#4A76A8"});
+        $("#ShowHide4").mouseover(function(){
+            $("div.col-xl-12.col-md-5.push-md-1.push-xl-0.btn-but-2.lk-footer").css("background","#4A76A8");
+            $("#ShowHide3").css("background","#262626");
+			$("div.col-xl-12.col-md-5.btn-but-1.zadat-vopros-footer").css("background","#262626");
+			$("div.col-xl-12.col-md-5.btn-but-1.zadat-vopros-footer").css("border", "1px solid #FFFFFF");
+    });
+        $("#ShowHide4").mouseout(function(){
+            $("div.col-xl-12.col-md-5.push-md-1.push-xl-0.btn-but-2.lk-footer").css("background","#262626");
+            $("#ShowHide3").css("background","#4A76A8");
+		$("div.col-xl-12.col-md-5.btn-but-1.zadat-vopros-footer").css("background","#4A76A8");
+        });
+    });
+});
+</script>
 </body>
 
 </html>

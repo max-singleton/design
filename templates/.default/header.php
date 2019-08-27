@@ -1,3 +1,8 @@
+<style>
+.window-open {
+    text-decoration: none;
+}
+</style>
 <div class="container header_design">
     <div class="row header new_header">
         <div class="col-xl-3 col-lg-3 col-md-3 ">
@@ -35,10 +40,10 @@
                     <div class="col-xl-8 col-md-12 navig nav">
                     </div>
 					<div class="col-xl-4 col-md-12 navig-2">
-                        <li class="navigation-items">
-                            <img class="vector" src="<?= DEFAULT_TEMPLATE_PATH ?>/img/Vector.png" alt="">
+                        <li class="navigation-items" <?php if ($USER->IsAuthorized()) echo 'style="display:none"'?>>
+							<img class="vector" src="<?= DEFAULT_TEMPLATE_PATH ?>/img/Vector.png" alt="">
 							<?php if (!($USER->IsAuthorized())) echo '<a class="window-open" href="javascript:void(0)" window="window-auth" init="true">ВХОД В ЛИЧНЫЙ КАБИНЕТ</a>' ?>
-							<?php if ($USER->IsAuthorized()) echo '<a href="/personal/info">ВХОД В ЛИЧНЫЙ КАБИНЕТ</a>' ?>
+							
 							<li class="navigation-items" <?php if ($USER->IsAuthorized()) echo 'style="display:none"'?>>
                             <img class="vector" src="<?= DEFAULT_TEMPLATE_PATH ?>/img/Vector-pencil.svg" alt="">
                         <a class="window-open" href="javascript:void(0)" window="window-register" init="true">РЕГИСТРАЦИЯ</a>
@@ -161,7 +166,9 @@
                             </ul>
                         </li>
                         <li><a href="/vopros/">ЗАДАТЬ ВОПРОС?</a></li>
-						<li><a href="/personal/info/">ЛИЧНЫЙ КАБИНЕТ</a>
+						<li>
+							
+							<?php if ($USER->IsAuthorized()) echo '<a href="/personal/info">ЛИЧНЫЙ КАБИНЕТ</a>'?>
                             <ul class="submenu">
                                 <li><a href="/personal/info/">Общая информация</a></li>
                                 <li><a href="/personal/circulating-sheet/">История начисления и оплат</a></li>
@@ -187,4 +194,4 @@
     </script>
         </div>
     </div>
-</div>    
+</div>

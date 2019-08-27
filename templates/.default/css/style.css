@@ -5,6 +5,11 @@ p{
     font-family: Roboto;
 }
 
+a {
+  outline: none;
+  text-decoration: none;
+}
+
 ul > li > p{
     text-indent: 0px;
 }

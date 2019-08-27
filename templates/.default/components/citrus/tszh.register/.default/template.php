@@ -99,7 +99,14 @@ function ShowField($FIELD)
                             ?>
 
                             <div style="position: relative">
-                            <input type="text" id="customer_phone" placeholder="Телефон" value="+7" class="window__input"><br>
+			
+
+
+   
+                            <input type="text" id="customer_phone" placeholder="Телефон" value="+7" class="window__input"<br>
+			<script>
+        $("#customer_phone").mask("+7(999)999-99-99");
+    </script>
                             <?// форма для ввода и проверки формата телефона?>
                             <input type="hidden" id="phone_mask_nahujnado" checked=""><label id="descr" for="phone_mask"></label>
                             <input type="hidden" id="phoneId" name="REGISTER[<?=$FIELD?>]" value="<?=$arrResult["VALUES"][$FIELD]?>">
@@ -199,6 +206,12 @@ function in_array_r($array, $item)
 }
 ?>
 
+<style>
+.window__button {
+    color: #FFF !important;
+    background-color: #767f8c !important;
+</style>
+
 <form class="block-register-form" name="block-register-form<?= $arResult["RND"] ?>" method="post" target="_top" action="/?login=yes">
 
     <? if (!empty($arParams["PROFILE_URL"])): ?>
@@ -209,8 +222,7 @@ function in_array_r($array, $item)
     <input type="hidden" name="TYPE" value="TSZHREGISTRATION"/>
     <div class="window__title"><?= getMessage("AUTH_REGISTER") ?></div>
 	<div class="block-register-form__error_main">
-		<p><font color="#000">Уважаемые пользователи, для входа на наш новый сайт достояние-наследие.рф логин и пароль с сайта etker21.ru не подходит. Для удобного пользования возможностями сайта и личным кабинетом вам необходимо заново пройти регистрацию на сайте.
-		</font></p></div>
+		</div>
     <!-- <div class="window__hr"></div> -->
 
 
@@ -378,20 +390,49 @@ value этого поля я хочу использовать здесь  https://xn----8sbkcccbsf1ardia8bhj9u
 
 
 
+<div class="window__block">
+<span class="window__input-star">*</span> - поля, обязательные для заполнения
+</div>
 
 
+
+<div class="window__block">
+<input type="checkbox" id="politics" onclick="check();" value="" autocomplete="off"/>
+Нажимая на кнопку "Зарегистрироваться", я даю <a href="/politiks/" target="a_blank">согласие на обработку персональных данных.</a>
+</div>
 
 
 
 
         <div class="window__block">
+<br>
             <input type="hidden" name="register_submit_button" value="Y">
-            <input class="window__button" type="submit" onclick="getValuePhone();lorem_del_spaces();probel()" value="<?= getMessage("AUTH_REGISTER_BUTTON") ?>">
+            <input id="reg" name="submit" disabled="" class="window__button" type="submit" onclick="getValuePhone();lorem_del_spaces();probel()" value="<?= getMessage("AUTH_REGISTER_BUTTON") ?>">
         </div>
     </div>
 
 </form>
 
+<script>
+	function check() {
+		var submit = document.getElementsByName('submit')[0];
+		if (document.getElementById('politics').checked)
+		submit.disabled = '';
+		else
+		submit.disabled = 'disabled';
+
+		var block = document.getElementById('reg');
+
+function changeBgImg(){
+if (document.getElementById('politics').checked)
+	reg.style.backgroundImage = "url('/img/red.png')";
+else
+	reg.style.backgroundImage = "url('')";
+}
+
+changeBgImg();
+	}
+</script>
 
 <script type="text/javascript">
 

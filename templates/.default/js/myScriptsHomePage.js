@@ -72,22 +72,3 @@ $(document).ready( function () {
         });
     });
 });
-
-/*При наведении на одну из кнопок другая кнопка меняет цвет в футере*/
-$(document).ready( function () {
-    $(function () {
-        $("#ShowHide3").css({"background":"#4A76A8"});
-        $("#ShowHide4").mouseover(function(){
-            $("div.col-xl-12.col-md-5.push-md-1.push-xl-0.btn-but-2").css("background","#4A76A8");
-            $("body > div.container.bg-footer > div > div.top-footer.row > div.col-xl-3.col-md-11.offset-md-1.col-xs-12.offset-xl-0.btn-but > div.col-xl-12.col-md-5.btn-but-1").css("background","#262626");
-            $("#ShowHide3").css("background","#262626");
-            $("body > div.container.bg-footer > div > div.top-footer.row > div.col-xl-3.col-md-11.offset-md-1.col-xs-12.offset-xl-0.btn-but > div.col-xl-12.col-md-5.btn-but-1").css("border","1px solid #FFFFFF");
-    });
-        $("#ShowHide4").mouseout(function(){
-            $("div.col-xl-12.col-md-5.push-md-1.push-xl-0.btn-but-2").css("background","#262626");
-            $("body > div.container.bg-footer > div > div.top-footer.row > div.col-xl-3.col-md-11.offset-md-1.col-xs-12.offset-xl-0.btn-but > div.col-xl-12.col-md-5.btn-but-1").css("background","#4A76A8");
-            $("#ShowHide3").css("background","#4A76A8");
-            $("body > div.container.bg-footer > div > div.top-footer.row > div.col-xl-3.col-md-11.offset-md-1.col-xs-12.offset-xl-0.btn-but > div.col-xl-12.col-md-5.btn-but-1").css("border","1px solid #FFFFFF");
-        });
-    });
-});

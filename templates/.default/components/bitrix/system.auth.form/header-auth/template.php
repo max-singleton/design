@@ -62,12 +62,7 @@ $frame = $this->createFrame()->begin(getMessage("T_AUTH_PROMPT"));
 </div>
 
 			</form>
-<div class="window__info">
-<b>Уважаемые пользователи, для входа на наш новый сайт достояние-наследие.рф 
-<span style="color:red">логин и пароль с сайта etker21.ru 
-не подходит.</span> Для удобного пользования возможностями сайта и личным кабинетом вам необходимо заново пройти регистрацию на сайте.
-</b>
-				</div>
+
 			<div class="window__hr">
 </div>
 			<div class="window__mobi-recall"><a class="mobi-recall__link window-open" href="javascript:void(0)" window="window-password-recovery"><?=getMessage("AUTH_FORGOT_PASSWORD")?>?</a></div>

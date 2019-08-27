@@ -7,8 +7,7 @@
 		"EDIT_TEMPLATE" => "",
 		"PATH" => "/local/templates/.default/head.php"
 	)
-);?>
-<div class='promo'>
+);?><div class='promo'>
 	<!-- Включение слайдера -->
 	    <div class="container carousel-wrap">
         <div id="carousel-example-generic" class="carousel slide posit-abs " data-ride="carousel">
@@ -152,7 +151,7 @@
         <div class="row auth__content justify-space-beetwen">
             <div class="col-xl-6 auth__left" >
                 <p class="text-nov color-white" style="color: #FFFFFF">ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ</p>
-                <form action="">
+                <!--<form action="">
                     <div class="container form">
                         <div class="row col-xs-9 col-xl-12">
                             <div class="col-xl-6 col-xs-12 form-group">
@@ -184,7 +183,73 @@
                             </div>
                         </div>
                     </div>
+                </form>-->
+
+
+
+
+
+<?
+	if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+    use Bitrix\Main\Localization\Loc;
+?>
+
+	<form class="" name="system_auth_form<?=$arResult["RND"]?>" method="post" target="_top" action="<?=$arResult["AUTH_URL"]?>">
+                    <div class="container form">
+                        	<div class="row col-xs-9 col-xl-12">                            
+									<?if($arResult["AUTH_FOR_INITIAL_ACCESS"] <> ''):?>
+										<input type="hidden" name="AUTH_FOR_INITIAL_ACCESS" value="<?=$arResult["AUTH_FOR_INITIAL_ACCESS"]?>" />
+									<?endif?>
+									<?if(!empty($arParams["PROFILE_URL"])):?>
+										<input type="hidden" name="tourl" value="<?=$arParams["PROFILE_URL"]?>" />
+									<?endif?>
+									<?foreach ($arResult["POST"] as $key => $value):?>
+										<input type="hidden" name="<?=$key?>" value="<?=$value?>" />
+									<?endforeach?>
+										<input type="hidden" name="AUTH_FORM" value="Y" />
+										<input type="hidden" name="TYPE" value="AUTH" />
+									<div class="col-xl-6 col-xs-12 form-group">
+										<label for="login">Логин</label>
+										<input class="" type="text" name="USER_LOGIN" maxlength="50" id="login" placeholder="Ваш логин" />                                
+									</div>
+									<div class="col-xl-6 col-xs-12 form-group">
+										<label for="password">Пароль</label>
+										<input class="" type="password" name="USER_PASSWORD" maxlength="50" id="password" placeholder="Введите пароль"/>                             
+									</div>
+
+										<input class="" type="text" name="captcha_word" id="captcha_word_foot" placeholder="<?=GetMessage("AUTH_CAPTCHA_PROMT")?>" value="" <? echo strlen($arResult["CAPTCHA_CODE"]) > 0 ? '' : 'style="display: none;"'; ?>/>
+										<img id="captcha_img_foot" src="/bitrix/tools/captcha.php?captcha_sid=<?=$arResult["CAPTCHA_CODE"]?>" class="auth__captcha-img"
+											 alt="CAPTCHA" <? echo strlen($arResult["CAPTCHA_CODE"]) > 0 ? '' : 'style="display: none;"'; ?>/>					
+
+										<input type="hidden" name="captcha_sid" id="captcha_sid_foot" value="<?=$arResult["CAPTCHA_CODE"]?>"/>
+							</div>
+                        
+                        <div class="row col-xs-9 col-xl-12">
+                            <div class="col-xl-6 form-group-2">                                
+								<input class="" id="auth__checkbox" type="checkbox" name="USER_REMEMBER" checked/>								
+                                <label for="auth__checkbox">Запомнить меня</label>
+                            </div>
+                            <div class="col-xl-6 form-group-2 text-align-right">
+                                <a href="javascript:void(0)" class="window-open" window="window-password-recovery" init="true">Забыли пароль?</a>
+                            </div>
+                        </div>
+                        <div class="row col-xs-9 col-xl-12 auth__panel">
+                            <div class="col-xl-5">
+                                <button type="submit">Войти</button>
+                            </div>
+                            <div class="col-xl-7 ">
+                                <p class="messadge">У вас нет логина и пароля? Вы можете <a class="window-open" href="javascript:void(0)" window="window-register" init="true">зарегистрироваться</a> прямо сейчас.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </form>
+
+
+
+
+
+
             </div>
             <div class="col-xl-6 kabinet_right">
                 <p class="kabinet-text">Уважаемые пользователи, для входа на наш новый сайт достояние-наследие.рф логин

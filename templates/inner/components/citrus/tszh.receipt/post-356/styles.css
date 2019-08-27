@@ -1,0 +1,183 @@
+@media print
+{
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+
+	.rcpt {
+		page-break-after: always;
+	}
+
+	.rcpt a {
+		text-decoration: none;
+	}
+}
+
+#receipt {
+	margin: 0 auto; padding: 0;
+	color: #000; background: #fff;
+	
+	max-width: 29.7cm;
+
+	font: 7pt/100% Arial, Helvetica, sans-serif;
+}
+
+#content table td {
+	border-bottom: none;
+}
+#content .rcpt table {
+	width: auto;
+}
+.rcpt table {
+	border-collapse: collapse;	
+}
+
+.rcpt {
+}
+.rcpt p {
+	margin: .5em 0; padding: 0;
+}
+
+h2 {
+	font: normal bold 7pt/100% Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0; padding: 0;
+}
+.rcpt-header p {
+	text-align: center;
+}
+
+.rcpt td {
+	padding: 1pt 5pt 3pt 5pt;
+	vertical-align: top;
+}
+.rcpt .rcpt-inner td {
+	vertical-align: middle;
+}
+
+table.rcpt-inner {
+	border: 1pt solid #000;
+	width: 100%;
+}
+table.rcpt-inner td, table.rcpt-inner th {
+	padding: 3pt 4pt 5pt 4pt;
+}
+table.rcpt-inner tr.rcpt-hr td, #content table.rcpt-inner tr.rcpt-hr td {
+	padding-bottom: 0;
+	border-bottom: 1pt solid #000;
+}
+table.rcpt-inner th {
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+	line-height: 120%;
+	white-space: nowrap;
+}
+table.rcpt-inner-table {
+	border-spacing: 0;
+}
+table.rcpt-inner-table td,
+table.rcpt-inner-table th,
+#content table.rcpt-inner-table td,
+#content table.rcpt-inner-table th  
+{
+	border: 1pt solid #000;
+	padding: 2pt 0 2pt 1pt;
+	border-spacing: 0;
+}
+table.rcpt-inner-table td {
+	font-size: 90%;
+}
+table.rcpt-inner-inner,
+#content table.rcpt-inner-inner {
+	border: none;
+}
+#content table.rcpt-inner-inner td,
+table.rcpt-inner-inner td {
+	border: none;
+	padding: 2pt 0;
+}
+#content table.rcpt-inner .rcpt-inner-empty td,
+table.rcpt-inner .rcpt-inner-empty td {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.rcpt td.n {
+	text-align: right;
+	white-space: nowrap;
+    padding-right: .3em;
+}
+
+.rcpt-inner-table-num th {
+	padding: 0;
+	text-align: center;
+}
+.rcpt-inner-table-footer td {
+	border: 2pt solid #000;
+	font-weight: bold;
+}
+.rcpt blockquote {
+	margin: 0 0 0 2em;
+	line-height: 150%;
+	font-style: normal;
+}
+
+
+.rcpt .em {
+	background-color: #ff0;
+}
+
+td.no-border {
+	border: none !important;
+}
+
+td.center {
+	text-align: center;
+}
+
+tr.debug td {
+	text-align: center;
+	background-color: #ffcc33;
+}
+
+.rcpt a {
+	color: #000;
+}
+#receipt .rcpt-big {
+	font-size: 8pt;
+	display: inline-block;
+	line-height: 150%;
+	margin-left: 2px;
+}
+.rcpt-group-title td {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.rcpt-barcode-cell {
+	text-align: center;
+}
+.rcpt-barcode {
+	display: block;
+	border: 0;
+	margin: .5em auto;
+	padding-right: 1em;
+	max-height: 2.5cm;
+}
+
+.rcpt .nowrap,
+.rcpt .nowrap * {
+	white-space: nowrap;
+}
+
+.rcpt .padding-left {
+	padding-left: 1em !important;
+}
+
+.overflowx{
+	overflow-x: auto;
+}
