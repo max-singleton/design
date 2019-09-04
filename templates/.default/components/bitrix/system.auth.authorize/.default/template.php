@@ -97,26 +97,5 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
         </div>
     </form>
     <div class="window__hr"></div>
-    <?if($arResult["AUTH_SERVICES"]):?>
-        <?
-        $APPLICATION->IncludeComponent("bitrix:socserv.auth.form", "",
-            array(
-                "AUTH_SERVICES"=>$arResult["AUTH_SERVICES"],
-                "AUTH_URL"=>$arResult["AUTH_URL"],
-                "POST"=>$arResult["POST"],
-                "POPUP"=>"N",
-                "SUFFIX"=>"form",
-            ),
-            $component,
-            array("HIDE_ICONS"=>"Y")
-        );
-        ?>
-    <?endif?>
-
-    <div class="window__mobi-recall"><a class="mobi-recall__link window-open" href="javascript:void(0)" window="window-password-recovery"><?=getMessage("AUTH_FORGOT_PASSWORD")?>?</a></div>
-    <div class="window__info">
-        <div class="window__info-text"><?=getMessage("FOR_INITIAL_ACCESS")?></div>
-        <a class="window__info-link" onclick='$("#contact-user-name").focus()' href="#contact"><?=getMessage("AUTH_CONTACT_OUR_OFFICE")?></a>
-    </div>
 </div>
 

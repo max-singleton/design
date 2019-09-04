@@ -23,7 +23,6 @@ if (array_key_exists("NOTE", $arResult))
 	<?
 }
 ?>
-
 <div>
 	<?
 	if ($arResult['ACC'] == 0)
@@ -44,6 +43,12 @@ if (array_key_exists("NOTE", $arResult))
                 //$("#amount").text('50%');
             });
 		</script>
+
+
+
+
+
+
 <?php
 $var=$arUser['UF_LIC'];
 //Далее будет велосипед
@@ -57,8 +62,6 @@ foreach($res1 as $myarr){
 	$id_from_site = $eto;
 }
 }
-
-
 //Узнаем кодовое слово для привязки лицевого счета с помощью ID сайте
 $sql2 = 'SELECT `UF_REGCODE` FROM `b_uts_tszh_account` WHERE `VALUE_ID`='."$id_from_site";
 $obj2 = mysqli_query($link, $sql2);
@@ -68,11 +71,6 @@ foreach($res2 as $myarr){
 	$code_uk = $eto;
 }
 }
-//Закрываю соединеие с БД, потому что много открытых соединений с БД - это плохо
-//Выдает ошибку при mysql_close($link). Тогда пусть нафиг идет это Bitrix-говно
-
-$GLOBALS['lic'] = $code_uk;
-$_REQUEST['regcode'] = $code_uk;
 ?>
 
 
@@ -94,12 +92,26 @@ $_REQUEST['regcode'] = $code_uk;
 
 
 
-<div class="col-md-8 p-lg-8 mx-auto my-8">
-<h1 class="display-4 font-weight-normal">Что-то пошло не так... </h1>
-	<center><p class="lead font-weight-normal">Попробуйте еще раз или напишите нам в форме "Задать вопрос". Возможно, вы не польностью скопировали код или указали неверный лицевой счет. Если поле ниже пустое, то перейдите по ссылке ниже</p></center>
-	<center><a class="btn btn-outline-secondary" href="/personal/confirm-account/confirm-account.php" target="_blank">Узнать кодовое слово</a></center>
+
+
+
+
+
+		<p id="error" style="display: block; color: red">
+		</p>
+
+
+
+
+
+
+
+
+<div class="alert alert-info">
+	<center><h1>Нажмите "Далее"</h1></center></div>
+<div>
+		Если поле ниже пустое, то воспользуйтесь <span style="color: red; font-size: 1.5em"><a href="/personal/confirm-account/confirm-account.php" target="_blank">этой ссылкой</a></span>, чтобы скопировать кодовое слово.
 </div>
-<br>
 
 
 
@@ -108,20 +120,23 @@ $_REQUEST['regcode'] = $code_uk;
 
 
 
-		<form  class="form-group" id="send" method="post" action="#">
-			<input type="hidden" id="word" name="word" value="" class="code">
+
+
+
+
+		<form id="send" method="post" action="#">
+			<input type="hidden" id="word" name="word" value="1" class="code">
 			<input type="hidden" id="check" name="check" value="citrus:tszh.account.confirm" class="code">
 			<span class="starrequired"></span>
 			<span class="title"></span>
-			<input  class="form-control form-control-lg" type="text" id="codr" name="regcode" value="<?=$code_uk?>" class="code"><br><br>
-
-<p style="text-align: right">
+			<input type="text" id="codr" name="regcode" value="<?=$code_uk?>" class="code"><br><br>
+			<p style="text-align: right">
 				<a href="<?=SITE_DIR?>personal/confirm-account/" id="step3Prev" class="form-variable__button form-variable__saved link-theme-default">
 					<?=GetMessage("TAC_BUTTON_PREV")?>
 				</a>
 				<button type="submit" id="step3Prev1"
 				        class="form-variable__button form-variable__saved link-theme-default"><?=GetMessage("TAC_BUTTON_NEXT")?></button>
-</p>
+			</p>
 		</form>
 
 
@@ -189,4 +204,3 @@ $_REQUEST['regcode'] = $code_uk;
 	}
 	?>
 </div>
-
